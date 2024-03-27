@@ -1,3 +1,4 @@
+let players=document.querySelectorAll("input");
 const f1= (id) =>{
     let val = Math.ceil(Math.random()*6)
     document.getElementById(id).innerHTML=val
@@ -9,40 +10,25 @@ const f2=() =>{
     let v3=parseInt(document.getElementById('p3').innerHTML);
     let v4=parseInt(document.getElementById('p4').innerHTML);
     let v5=parseInt(document.getElementById('p5').innerHTML);
-    // if (v1>= v2 && v1>=v3 && v1>=v4 && v1>=v5) {
-    //     winMessage.innerHTML="v1 wins"
-    // }
-    // else if ( v2>=v3 && v2>=v4 && v2>=v5) {
-    //     winMessage.innerHTML="v2 wins"
-    // }
-    // else if (v3>=v4 && v3>=v5) {
-    //     winMessage.innerHTML="v3 wins"
-    // }
-    // else if ( v4>=v5) {
-    //     winMessage.innerHTML="v4 wins"
-    // }
-    // else{
-    //     winMessage.innerHTML="v5 wins"
-    // }
     let maxVal = Math.max(v1, v2, v3, v4, v5);
     let winners = [];
 
     if (v1 === maxVal) {
-        winners.push("v1");
+        winners.push("players.value");
     }
     if (v2 === maxVal) {
-        winners.push("v2");
+        winners.push("players.value");
     }
     if (v3 === maxVal) {
-        winners.push("v3");
+        winners.push("players.value");
     }
     if (v4 === maxVal) {
-        winners.push("v4");
+        winners.push("players.value");
     }
     if (v5 === maxVal) {
-        winners.push("v5");
+        winners.push("players.value");
     }
 
-    winMessage.innerHTML = "Winner(s): " + winners.join(", ");
+    winMessage.innerHTML = "Winner(s): " + winners;
 
 }
